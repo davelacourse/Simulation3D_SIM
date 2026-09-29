@@ -9,15 +9,29 @@ public class Player : MonoBehaviour
     [SerializeField] private float _rotationSpeed = 720f;
 
     [SerializeField] private GameInput _gameInput;
-    
-    private void Update()
+
+    private Rigidbody _rb;
+
+    private void Awake()
+    {
+        _rb = GetComponent<Rigidbody>();
+    }
+
+    private void FixedUpdate()
     {
         
         Vector2 inputVector = _gameInput.GetMovementVectorNormalized();
 
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
 
-        transform.position += moveDir * Time.deltaTime * _moveSpeed;
+        // Déplacement par (téléportation) position
+        // transform.position += moveDir * Time.deltaTime * _moveSpeed;
+
+        // Déplace par le corps physique de mon joueur par la vitesse
+        // _rb.linearVelocity = moveDir * Time.deltaTime * _moveSpeed;
+
+        // Déplace par le corps physique en poussant avec une force
+        _rb.AddForce(moveDir * Time.fixedDeltaTime * _moveSpeed);
 
         // Rotation du joueur
 
