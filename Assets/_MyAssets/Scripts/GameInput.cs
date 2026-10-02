@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class GameInput : MonoBehaviour
@@ -8,7 +8,7 @@ public class GameInput : MonoBehaviour
     private void Awake()
     {
         _playerInputActions = new PlayerInputActions();
-        _playerInputActions.Enable();
+        _playerInputActions.Player.Enable();
     }
 
     private void OnDestroy()
@@ -18,7 +18,7 @@ public class GameInput : MonoBehaviour
     }
 
     /// <summary>
-    /// Méthode qui retourne un vecteur 2 pour le déplacement du joueur
+    /// MÃ©thode qui retourne un vecteur 2 pour le dÃ©placement du joueur
     /// </summary>
     /// <returns></returns>
     
