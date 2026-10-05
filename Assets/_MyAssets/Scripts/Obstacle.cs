@@ -1,8 +1,8 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-    [Tooltip("Couleur de l'obstacle une fois touch�")]
+    [Tooltip("Couleur de l'obstacle une fois touché")]
     [SerializeField] private Material _hitMaterial;
 
     private Renderer _renderer;

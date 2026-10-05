@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,11 +7,11 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _hitCount = 0;
-        Debug.Log("Atteignez le burger le plus rapidement sans touché d'obstacle");
+        Debug.Log("Atteignez le burger le plus rapidement sans touchÃ© d'obstacle");
     }
     
     /// <summary>
-    /// Méthode qui augmente le nombre de collision
+    /// MÃ©thode qui augmente le nombre de collision
     /// </summary>
     public void RegisterHit()
     {
