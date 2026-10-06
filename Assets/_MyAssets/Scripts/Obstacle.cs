@@ -7,6 +7,7 @@ public class Obstacle : MonoBehaviour
 
     private Renderer _renderer;
     private GameManager _gameManager;
+    private bool _wasHit;
 
     private void Awake()
     {
@@ -20,12 +21,15 @@ public class Obstacle : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.TryGetComponent<Player>(out _))
+        if (!collision.gameObject.TryGetComponent<Player>(out _) || _wasHit)
         {
-            _renderer.material = _hitMaterial;
-            // Augmenter le hitcount dans le gameManager
-            _gameManager.RegisterHit();
+            return;
         }
+
+        _wasHit = true;
+        _renderer.material = _hitMaterial;
+        // Augmenter le hitcount dans le gameManager
+        _gameManager.RegisterHit();
 
     }
 }

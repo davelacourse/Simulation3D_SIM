@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        _hitCount = 0;
         Debug.Log("Atteignez le burger le plus rapidement sans touché d'obstacle");
     }
     
@@ -17,5 +16,17 @@ public class GameManager : MonoBehaviour
     {
         _hitCount++;
         Debug.Log($"Accrochages : {_hitCount}");
+    }
+
+    /// <summary>
+    /// Affiche le temps et le résultats du niveau qui vient de se terminer
+    /// </summary>
+    public void CompleteLevel()
+    {
+        float duration = Time.timeSinceLevelLoad;
+        float score = duration + _hitCount;
+        Debug.Log("***** Résultats *****");
+        Debug.Log($"Arrivée en {duration:F2} sec., pénalités : {_hitCount}");
+        Debug.Log($"Résultat final : {score:F2} sec.");
     }
 }
