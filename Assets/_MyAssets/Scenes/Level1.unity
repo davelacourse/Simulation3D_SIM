@@ -2604,6 +2604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1482096593}
   - component: {fileID: 1482096594}
+  - component: {fileID: 1482096595}
   m_Layer: 0
   m_Name: FinishZone
   m_TagString: Untagged
@@ -2648,6 +2649,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2.36
   m_Center: {x: -0.35, y: 0.58, z: 0}
+--- !u!114 &1482096595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482096592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68ef2e751a213ee49a19d160c094e3e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &1545641277
 PrefabInstance:
   m_ObjectHideFlags: 0
