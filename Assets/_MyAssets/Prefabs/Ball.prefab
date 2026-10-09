@@ -154,3 +154,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
   _hitMaterial: {fileID: 2100000, guid: 99a04706cc9c3cf4ca435e0590ee80f1, type: 2}
+  _penaltySeconds: 2
